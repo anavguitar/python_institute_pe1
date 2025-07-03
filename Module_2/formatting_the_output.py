@@ -18,26 +18,31 @@ print("  *   *")
 print("  *****")
 
 # 1. minimize the number of print() function invocations by inserting the \n sequence into the strings
-print("EXAMPLE 1\n")
+print("\nEXAMPLE 1\n")
 print("    *", "   * *", "  *   *", " *     *", sep="\n" )
 print("***   ***", "  *   *", "  *   *", "  *****", sep="\n")
 
 # 2. make the arrow twice as large (but keep the proportions)
-str_list = ["    *",
-            "   * *",
-            "  *   *",
-            " *     *",
+str_list = ["    *    ",
+            "   * *   ",
+            "  *   *  ",
+            " *     * ",
             "***   ***",
-            "  *   *",
-            "  *   *",
-            "  *****"]
+            "  *   *  ",
+            "  *   *  ",
+            "  *****  "]
 
-print("EXAMPLE 2\n")
+print("\nEXAMPLE 2\n")
 for s in str_list:
     new_str = ''
     for char in s:
         new_str += char * 2
     print(new_str, end='\n\n')
 
-
+# 3. duplicate the arrow, placing both arrows side by side; note: a string may be multiplied by using the following trick: "string" * 2 will produce "stringstring" (we'll tell you more about it soon)
+print('EXAMPLE 3\n')
+new_str = ''
+for s in str_list:
+    new_str += s + ' ' + s + '\n'
+print(new_str)
 
